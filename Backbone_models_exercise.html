@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backbone Setup</title>
+  <script src="jquery-1.11.3.min.js"></script>
+  <script src="underscore.js"></script>
+</head>
+<body>
+<fieldset>
+    <title> Stack List 
+    </title>
+    <ul>
+        {{*forEach stack in stacks}}
+        <li>{{stack.Title}}<ul>
+            <li>Instructor: {{stack.Instructor}}</li>
+            <li>Language: {{stack.Language}}</li>
+        </ul></li>
+    </ul>
+</fieldset>
+  <script src="Backbone_models_excercise.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script src="./node_modules/react/umd/react.development.js"></script>
+    <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script>
+        console.log(React);
+        console.log(ReactDOM);
+    </script>
+    <title>Ticking Clock</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="clock">
+            <div id="app"></div>
+            <button id="clicker">Click here!</button>
+        </div>
+    </div>
+    <script>        
+        console.log('Clicked');
+        function tick(){
+            const element = (
+                <div>
+                    <h3>The time is:</h3>
+                    <h1>{new Date().toLocaleTimeString()}.</h1>
+                </div>
+            );
+        }
+        $(document).ready(function(){
+            $('button').click(function(){
+                ReactDOM.render(element, document.getElementById('app'));
+                setInterval(tick, 1000);
+            })
+        });
+    </script>
+</body>
